@@ -1,40 +1,45 @@
-# Peer-graded-Assignment-Course-Project-1
-At Thanks for look around my result.
-Above all, please understand my English skill..
+# Peer-Graded Assignment: Course Project 1
 
-There are 3 files in this repository
-<li> README.md </li>
-<li> R script for making assignment plot </li>
-<li> PNG image files which represent plots. </li>
+## Overview
+Thank you for reviewing my submission. Please note that English is not my first language, so I appreciate your understanding.
 
-Here is Dataset.
-<a href="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip">Electric power consumption</a> [20Mb]
+## Repository Contents
+This repository contains the following files:
 
-The following descriptions of the 9 variables in the dataset are taken
-from
-the <a href="https://archive.ics.uci.edu/ml/datasets/Individual+household+electric+power+consumption">UCI
-web site</a>:
+1. **README.md** – Documentation and project details.
+2. **R script** – The script used to generate the assignment plots.
+3. **PNG image files** – The resulting plots from the analysis.
 
-<ol>
-<li><b>Date</b>: Date in format dd/mm/yyyy </li>
-<li><b>Time</b>: time in format hh:mm:ss </li>
-<li><b>Global_active_power</b>: household global minute-averaged active power (in kilowatt) </li>
-<li><b>Global_reactive_power</b>: household global minute-averaged reactive power (in kilowatt) </li>
-<li><b>Voltage</b>: minute-averaged voltage (in volt) </li>
-<li><b>Global_intensity</b>: household global minute-averaged current intensity (in ampere) </li>
-<li><b>Sub_metering_1</b>: energy sub-metering No. 1 (in watt-hour of active energy). It corresponds to the kitchen, containing mainly a dishwasher, an oven and a microwave (hot plates are not electric but gas powered). </li>
-<li><b>Sub_metering_2</b>: energy sub-metering No. 2 (in watt-hour of active energy). It corresponds to the laundry room, containing a washing-machine, a tumble-drier, a refrigerator and a light. </li>
-<li><b>Sub_metering_3</b>: energy sub-metering No. 3 (in watt-hour of active energy). It corresponds to an electric water-heater and an air-conditioner.</li>
-</ol>
+## Dataset
+The dataset used for this project is **Electric Power Consumption** from the UCI Machine Learning Repository (approximately 20MB in size). You can download it from the official source.
 
+### Description of Variables
+The dataset contains 9 variables:
 
-## Summary
-1. Download Dataset
-2. Load data and extract data from 2007-2-1 to 2007-2-2
-3. Modify variables classes appropriate for making plots
-4. Make plots and save plots
+- **Date**: Date in the format `dd/mm/yyyy`.
+- **Time**: Time in the format `hh:mm:ss`.
+- **Global_active_power**: Household global minute-averaged active power (in kilowatts).
+- **Global_reactive_power**: Household global minute-averaged reactive power (in kilowatts).
+- **Voltage**: Minute-averaged voltage (in volts).
+- **Global_intensity**: Household global minute-averaged current intensity (in amperes).
+- **Sub_metering_1**: Energy sub-metering No. 1 (in watt-hours). Represents energy consumption in the kitchen (dishwasher, oven, microwave). Gas-powered hot plates are not included.
+- **Sub_metering_2**: Energy sub-metering No. 2 (in watt-hours). Represents energy consumption in the laundry room (washing machine, tumble dryer, refrigerator, light).
+- **Sub_metering_3**: Energy sub-metering No. 3 (in watt-hours). Represents energy consumption for an electric water heater and an air conditioner.
 
-## Problem
-In plot3 and plot4, legend in PNG file is cut off...please look at my PNG file.
-In window screen, there is no problem at legend, but when I save images, problem happens.
-I think problem appears when setting images for certain size.
+## Summary of Analysis
+1. **Download Dataset**
+2. **Load Data** – Extract data for the period from **February 1, 2007, to February 2, 2007**.
+3. **Preprocess Data** – Convert variables into appropriate data types for visualization.
+4. **Generate and Save Plots** – Create visualizations and save them as PNG files.
+
+## Issue with Plots
+There is an issue with **Plot 3 and Plot 4** where the legend is getting cut off in the saved PNG files. This problem does not occur when viewing the plots in an interactive window but appears when setting a specific image size while saving.
+
+### Possible Causes & Solutions:
+- The issue might be related to **plot margins or aspect ratio** settings.
+- Adjusting **`mar` (margins) in `par()`** or using **`legend(x = "topright", inset = c(-0.1, 0))`** might resolve it.
+- Saving with a higher resolution (`res=150` or more) in `png()` can help.
+- Specifying a larger width and height when using `png()` could prevent truncation.
+
+I appreciate any feedback or suggestions to improve this submission!
+
